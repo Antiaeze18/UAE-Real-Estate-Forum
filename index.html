@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAE Real Estate Forum - Professional Property Network</title>
+    <meta name="description" content="UAE Real Estate Organization Forum - Connect with industry professionals, investors, and clients. Discuss market trends, share opportunities, and access expert advice.">
+    <meta name="keywords" content="UAE real estate, property forum, Dubai property, Abu Dhabi real estate, investment opportunities, property market trends">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="UAE Real Estate Forum - Professional Property Network">
+    <meta property="og:description" content="Connect with UAE real estate professionals, share opportunities, and discuss market trends in our exclusive forum.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:title" content="UAE Real Estate Forum - Professional Property Network">
+    <meta name="twitter:description" content="Connect with UAE real estate professionals, share opportunities, and discuss market trends in our exclusive forum.">
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #C8102E;
+            --secondary-color: #009639;
+            --accent-color: #FFD700;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --background-light: #f8f9fa;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-200;
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-200;
+        }
+        
+        .btn-outline {
+            @apply border-2 border-[var(--primary-color)] text-[var(--primary-color)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--primary-color)] hover:text-white transition-all duration-200;
+        }
+        
+        .nav-link {
+            @apply text-gray-700 hover:text-[var(--primary-color)] font-medium transition-colors duration-200;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script type="text/babel" src="firebase.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/Features.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
